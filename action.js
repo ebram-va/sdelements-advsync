@@ -7,7 +7,9 @@ async function exec () {
     try
     {
         const config = parseConfig()
+        core.info("Starting action 1")
         const octokit = github.getOctokit(config.ghtoken)
+        core.info("Starting action 2")
         const sdelements = new SDElements(config.url, config.apitoken, config.project)
         core.info(github.context.eventName)
         switch(github.context.eventName) {
