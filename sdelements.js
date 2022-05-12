@@ -55,8 +55,9 @@ class SDElements {
             core.info(idFromTitle);
             const task = await this.getTask(idFromTitle);
             return task;
-        } catch {e}
-            core.warning(e)
+        } catch (e) {
+            core.warning(e.message)
+            }
         return null
     }
 
