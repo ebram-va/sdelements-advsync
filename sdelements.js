@@ -51,6 +51,8 @@ class SDElements {
     async findTaskFromIssueTitle(title) {
         try {
             const idFromTitle = title.split(':')[0];
+            core.info('idfromtitle is below:');
+            core.info(idFromTitle);
             const task = await this.getTask(idFromTitle);
             return task;
         } catch {}
