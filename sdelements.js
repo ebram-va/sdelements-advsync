@@ -10,7 +10,7 @@ class SDElements {
 
     async getTasks() {
         const url = `${this.url}/api/v2/projects/${this.project}/tasks/`;
-        core.info(url);
+        core.info(url)
         const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -30,7 +30,7 @@ class SDElements {
 
     async getTask(taskId) {
         const url = `${this.url}/api/v2/projects/${this.project}/tasks/${this.project}-${taskId}/`;
-        core.info(url);
+        core.info(url)
         const response = await fetch(url, {
             method: 'GET',
             headers: {
