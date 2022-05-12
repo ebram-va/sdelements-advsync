@@ -3,10 +3,9 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 
 async function exec () {
-    core.info("Starting action")
+    #core.info("Starting action")
     try
     {
-        core.info("Starting action 0")
         const config = parseConfig()
         core.info("Starting action 1")
         const octokit = github.getOctokit(config.ghtoken)
