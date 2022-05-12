@@ -6,6 +6,7 @@ async function exec () {
     core.info("Starting action")
     try
     {
+        core.info("Starting action 0")
         const config = parseConfig()
         core.info("Starting action 1")
         const octokit = github.getOctokit(config.ghtoken)
