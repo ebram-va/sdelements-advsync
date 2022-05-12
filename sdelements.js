@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const core = require('@actions/core')
 
 class SDElements {
     constructor(url, apitoken, project) {
@@ -9,7 +10,7 @@ class SDElements {
 
     async getTasks() {
         const url = `${this.url}/api/v2/projects/${this.project}/tasks/`;
-        console.log(url);
+        core.info(url);
         const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -29,7 +30,7 @@ class SDElements {
 
     async getTask(taskId) {
         const url = `${this.url}/api/v2/projects/${this.project}/tasks/${this.project}-${taskId}/`;
-        console.log(url);
+        core.info(url);
         const response = await fetch(url, {
             method: 'GET',
             headers: {
