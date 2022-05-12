@@ -8333,8 +8333,9 @@ class SDElements {
             core.info(idFromTitle);
             const task = await this.getTask(idFromTitle);
             return task;
-        } catch {e}
-            core.warning(e)
+        } catch (error) {
+            core.warning(error)
+            }
         return null
     }
 
