@@ -70,7 +70,7 @@ async function handleIssue(sdelements, octokit, github) {
 }
 
 async function handleIssueComment(sdelements, octokit, github) {
-    core.info('calling handleIssueComment');
+    core.info("calling handleIssueComment")
     const task = await sdelements.findTaskFromIssueTitle(github.context.payload.issue.title)
     if(task !== null) {
         core.info(`Found a task from the title - ${task.id}`)
