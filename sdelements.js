@@ -8,7 +8,9 @@ class SDElements {
     }
 
     async getTasks() {
-        const response = await fetch(`${this.url}/api/v2/projects/${this.project}/tasks/`, {
+        const url = `${this.url}/api/v2/projects/${this.project}/tasks/`;
+        console.log(url);
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
