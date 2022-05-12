@@ -9,7 +9,7 @@ async function exec () {
         const config = parseConfig()
         const octokit = github.getOctokit(config.ghtoken)
         const sdelements = new SDElements(config.url, config.apitoken, config.project)
-        core.infor(github.context.eventName)
+        core.info(github.context.eventName)
         switch(github.context.eventName) {
             case "issues":
                 await handleIssue(sdelements, octokit, github)
